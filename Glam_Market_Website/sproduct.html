@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="shop_page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Glamarket</title>
+    <link rel="stylesheet" href="/css/index.css"/>
+</head>
+<body>
+    <div class="headerAndNav">
+    <header>
+        <section id="header">
+            <a href="#"><img src="media/logo/Pink Bold Retro Aesthetic Makeup Artist Circle Logo (1).png" class="logo" width="150" height="auto"/></a>
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a class="active" href="/shop.html">Shop</a></li>
+            <li><a href="/services.html">services</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+            <li><a href="/searchengine.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li><a href="/login.html">Login </a></li>
+            <li><a href="/customer.html"><i class="fa-solid fa-user fa-rotate-by"></i> </a></li>
+
+        </ul>
+    </nav>
+   </div>
+
+
+<section class="page-header">
+    <h2>MakeUp</h2>
+    <p>Enhance your beauty with GlaMarket.</p>
+    <p> Whether you're looking for simple cosmetics or a professional make-up set!!</p>         
+</section>
+
+<section class="prodetails ">
+    <div class="single-pro-img">
+        <img src="/media/Products/face/face1.PNG" width="100%" id="mainImg">
+        <div class="small-img-group">
+            <div class="small-img-col">
+                <img src="/media/Products/face/face2.PNG" width="100%" class="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="/media/Products/face/face6.PNG" width="100%" class="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="/media/Products/face/face4.PNG" width="100%" class="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="/media/Products/face/face5.PNG" width="100%" class="small-img">
+            </div>        
+        </div>
+
+    </div>
+
+    <div class="single-pro-details">
+        <h6>Face Product</h6>
+        <h2>Cheek Palette</h2>
+        <h2>50 QR</h2>
+        <input type="number" value="1">
+        <button class="normal">Add to cart</button>
+        <h4>Product details</h4>
+        <p>The product textures are soft, easy to blend and highly pigmented,
+        The blusher comes in a matte finish, to create a natural look, and in a metallic finish, to add a glowy touch to your make-up.
+        Thanks to the integrated mirror and the slim format, it is practical and handy, also suitable for touch ups on-the-go.</p>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<script>
+    let MainImg = document.getElementById("mainImg");
+    let SmallImgs = document.getElementsByClassName("small-img");
+
+    for (let i = 0; i < SmallImgs.length; i++) {
+        SmallImgs[i].onclick = function() {
+            MainImg.src = SmallImgs[i].src;
+        };
+    }
+</script>
+
+<script src="script.js"></script>
+</body>
+<hr>
+
+
+<footer>
+<div class="social-icons-btn">
+       <a class="icons facebook" href="https://www.facebook.com/"><img src="/icons/facebook.svg" alt="facebook"/></a>
+        <a class="icons instagram" href= "https://www.instagram.com/?hl=ar"><img src="/icons/instagram.svg"alt= "Instagram"/></a>
+        <a class="icons twitter" href="https://twitter.com/"><img src="/icons/twitter.svg"alt="twitter"/></a>
+        <a class="icons emailIcon " href="mailto:Glamarket@gmail.com"><img src="/icons/mail.svg"alt= "Email"/></a> 
+</div>
+
+<div class="copyright">
+    <p>Copyright &copy; 2024 Glamarket, Inc.</p>
+</div>
+</footer>   
+</html>

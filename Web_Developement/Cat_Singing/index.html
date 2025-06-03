@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song from Lily</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card" id="flow1">
+        <div class="section">
+          <div class="label">P<br>L<br>A<br>Y</div>
+          <img src="assets/image@2x.png" class="cat-square" alt="cat sleeping">
+          <div class="label">P<br>L<br>A<br>Y</div>
+        </div>  
+        <div class="progress-container">
+          <div id="progressBar1"></div>
+        </div>  
+        <div class="controls">
+            
+            <img src="assets/Media/Rewind.svg" class="icon" onclick="goToFlow2()">
+            <img src="assets/Media/Play@2x.png" class="icon" onclick="goToFlow2()">
+            <img src="assets/Media/Forward.svg" class="icon">
+          </div>
+    </div>
+    <div class="card hidden" id="feelCard">
+        <div class="section">
+          <div class="label">F<br>E<br>E<br>L</div>
+          <img src="assets/cat@2x.png" class="cat-round" id="spinCat" alt="cat awake">
+          <div class="label">F<br>E<br>E<br>L</div>
+        </div>
+
+        <div class="progress-container">
+          <div id="progressBar2"></div>
+        </div>        
+    
+        <div class="controls">
+          <img src="assets/Media/Rewind.svg" class="icon" id="rewindBtn">
+          <img src="assets/Media/pause.svg" class="icon" id="pauseBtn">
+          <img src="assets/Media/Forward.svg" class="icon">
+        </div>
+      </div>
+      <audio id="song" src="assets/Iloveyou.mp3"></audio>
+  <script src="script.js"></script>
+
+</body>
+</html>
