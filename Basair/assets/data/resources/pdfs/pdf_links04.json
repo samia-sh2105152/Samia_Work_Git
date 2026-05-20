@@ -1,0 +1,61 @@
+{
+  "links": [
+    {
+      "nodeId": "1.1",
+      "kind": "pdf",
+      "url": "assets/data/resources/pdfs/0_MihwarPDF.pdf",
+      "label": "يتامى – آية 2",
+      "page": 2
+    },
+    {
+      "nodeId": "1.2",
+      "kind": "pdf",
+      "url": "assets/data/resources/pdfs/0_MihwarPDF.pdf",
+      "label": "الزواج المكرم – آيتا 3–4",
+      "page": 6
+    },
+    {
+      "nodeId": "1.3",
+      "kind": "pdf",
+      "url": "assets/data/resources/pdfs/0_MihwarPDF.pdf",
+      "label": "السفهاء – آية 5",
+      "page": 9
+    },
+
+    {
+      "nodeId": "2.1",
+      "kind": "pdf",
+      "url": "assets/data/resources/pdfs/1_MihwarPDF.pdf",
+      "label": "آيات 15–18",
+      "page": 1
+    },
+    {
+      "nodeId": "2.2",
+      "kind": "pdf",
+      "url": "assets/data/resources/pdfs/1_MihwarPDF.pdf",
+      "label": "آيات 19–21",
+      "page": 4
+    },
+    {
+      "nodeId": "3.1",
+      "kind": "pdf",
+      "url": "assets/data/resources/pdfs/2_MihwarPDF.pdf",
+      "label": "آيات 26–28",
+      "page": 1
+    },
+    {
+      "nodeId": "4.1",
+      "kind": "pdf",
+      "url": "assets/data/resources/pdfs/3_MihwarPDF.pdf",
+      "label": "مِحور 4 – الجزء 1",
+      "page": 1
+    },
+    {
+      "nodeId": "4.2",
+      "kind": "pdf",
+      "url": "assets/data/resources/pdfs/3_MihwarPDF.pdf",
+      "label": "مِحور 4 – الجزء 2",
+      "page": 2
+    }
+  ]
+}

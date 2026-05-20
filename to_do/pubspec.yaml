@@ -98,7 +98,9 @@ flutter:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/icon/Logo.png"
+  image_path: "assets/icon/Icon.png"
   remove_alpha_ios: true
+  adaptive_icon_background: "#EAF3DF"
+  adaptive_icon_foreground: "assets/icon/Icon.png"
 
 

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imprima&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <div class="search">
+        <input
+          type="text"
+          placeholder="Enter City Name"
+          spellcheck="false"
+          autocomplete="off"
+        />
+        <button><img src="images/Search.png" /></button>
+      </div>
+      <div class="recent-search">
+        <img
+          src="images/History.png"
+          class="history-icon"
+          alt="Search history"
+        />
+        <div class="recent-list"></div>
+      </div>
+      <div class="error">
+        <p>Invalid City Name</p>
+      </div>
+      <div class="weather">
+        <img src="images/Rainy.png" class="weather-icon" />
+        <h3 class="type">Clear</h3>
+        <h1 class="temp">22° C</h1>
+        <h2 class="city">Doha</h2>
+        <p class="date-time">Tuesday, 7 May • 9:45 PM</p>
+        <div class="details">
+          <div class="col">
+            <img src="images/Humidity.png" alt="" />
+            <div>
+              <p class="humidity">50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="images/Wind.png" alt="" />
+            <div>
+              <p class="wind">15 km/h</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="images/temp.png" alt="" />
+            <div>
+              <p class="feels-like">5.29</p>
+              <p>Feels Like</p>
+            </div>
+          </div>
+          <div class="col sunrise-sunset">
+            <div class="sun-time">
+              <img src="images/Sunny.png" />
+              <p>
+                <strong>Sunrise:</strong> <span class="sunrise">5:08 AM</span>
+              </p>
+            </div>
+            <div class="sun-time">
+              <img src="images/night.png" class="sunset-icon" />
+              <p>
+                <strong>Sunset:</strong> <span class="sunset">6:11 PM</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const api_key = "0f4eba671f8a2b080583b5a9ed3e8830";
+      const api_url =
+        "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+      const search_box = document.querySelector(".search input");
+      const search_btn = document.querySelector(".search button");
+      const weather_icon = document.querySelector(".weather-icon");
+
+      let recent_cities =
+        JSON.parse(localStorage.getItem("recent_cities")) || [];
+
+      function saveRecentCity(city) {
+        city = city.trim();
+        if (!city) return;
+        recent_cities = recent_cities.filter(
+          (item) => item.toLowerCase() !== city.toLowerCase(),
+        );
+        recent_cities.unshift(city);
+        if (recent_cities.length > 4) {
+          recent_cities.pop();
+        }
+        localStorage.setItem("recent_cities", JSON.stringify(recent_cities));
+        displayRecentCities();
+      }
+
+      function displayRecentCities() {
+        const recentBox = document.querySelector(".recent-search");
+        const recentList = document.querySelector(".recent-list");
+        recentList.innerHTML = "";
+        if (recent_cities.length === 0) {
+          recentBox.style.display = "none";
+          return;
+        }
+
+        recentBox.style.display = "flex";
+        recent_cities.forEach((city) => {
+          const button = document.createElement("button");
+          button.innerHTML = city;
+          button.addEventListener("click", () => {
+            search_box.value = city;
+            checkWeather(city);
+          });
+          recentList.appendChild(button);
+        });
+      }
+      displayRecentCities();
+
+      async function checkWeather(city) {
+        const response = await fetch(api_url + city + `&appid=${api_key}`);
+        if (response.status == 404) {
+          document.querySelector(".error").style.display = "block";
+          document.querySelector(".weather").style.display = "none";
+        } else {
+          var data = await response.json();
+          saveRecentCity(data.name);
+          console.log(data);
+
+          document.querySelector(".type").innerHTML =
+            data.weather[0].description;
+          document.querySelector(".city").innerHTML =
+            data.name + ", " + data.sys.country;
+          document.querySelector(".temp").innerHTML =
+            Math.round(data.main.temp) + "° C";
+          document.querySelector(".humidity").innerHTML =
+            data.main.humidity + "%";
+          document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+          document.querySelector(".feels-like").innerHTML =
+            Math.round(data.main.feels_like) + "° C";
+
+          if (data.weather[0].main == "Clouds") {
+            weather_icon.src = "images/Cloudy.png";
+          } else if (data.weather[0].main == "Clear") {
+            weather_icon.src = "images/Clear.png";
+          } else if (data.weather[0].main == "Rain") {
+            weather_icon.src = "images/Rainy.png";
+          } else if (data.weather[0].main == "Drizzle") {
+            weather_icon.src = "images/Drizzle.png";
+          } else if (data.weather[0].main == "Sunny") {
+            weather_icon.src = "images/Sunny.png";
+          } else if (data.weather[0].main == "Storm") {
+            weather_icon.src = "images/Stormy.png";
+          } else if (
+            data.weather[0].main == "Mist" ||
+            data.weather[0].main == "Fog" ||
+            data.weather[0].main == "Haze"
+          ) {
+            weather_icon.src = "images/Drizzle.png";
+          }
+
+          // date-time
+          const local_time = new Date((data.dt + data.timezone) * 1000);
+          document.querySelector(".date-time").innerHTML =
+            local_time.toLocaleDateString("en-US", {
+              weekday: "long",
+              day: "numeric",
+              month: "long",
+            }) +
+            " • " +
+            local_time.toLocaleTimeString("en-US", {
+              hour: "numeric",
+              minute: "2-digit",
+              hour12: true,
+              timeZone: "UTC",
+            });
+
+          // sunrise, sunset
+          const sunrise_time = new Date(
+            (data.sys.sunrise + data.timezone) * 1000,
+          );
+          const sunset_time = new Date(
+            (data.sys.sunset + data.timezone) * 1000,
+          );
+          document.querySelector(".sunrise").innerHTML =
+            sunrise_time.toLocaleTimeString("en-US", {
+              hour: "numeric",
+              minute: "2-digit",
+              hour12: true,
+              timeZone: "UTC",
+            });
+
+          document.querySelector(".sunset").innerHTML =
+            sunset_time.toLocaleTimeString("en-US", {
+              hour: "numeric",
+              minute: "2-digit",
+              hour12: true,
+              timeZone: "UTC",
+            });
+
+          const weatherSection = document.querySelector(".weather");
+          weatherSection.style.display = "block";
+          weatherSection.classList.remove("show");
+
+          setTimeout(() => {
+            weatherSection.classList.add("show");
+          }, 10);
+          document.querySelector(".error").style.display = "none";
+        }
+      }
+
+      search_btn.addEventListener("click", () => {
+        checkWeather(search_box.value);
+      });
+      search_box.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          checkWeather(search_box.value);
+        }
+      });
+    </script>
+  </body>
+</html>

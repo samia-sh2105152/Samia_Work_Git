@@ -1,0 +1,17 @@
+{
+  "surahId": 4,
+  "links": [
+    {
+      "nodeId": "1.1",
+      "kind": "website",
+      "url": "",
+      "label": "Blog post about orphans’ rights"
+    },
+    {
+      "nodeId": "2.2",
+      "kind": "website",
+      "url": "https://example.com/article123",
+      "label": "Marriage in Islam – Tafsir notes"
+    }
+  ]
+}

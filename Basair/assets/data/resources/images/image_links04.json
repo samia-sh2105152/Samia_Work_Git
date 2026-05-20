@@ -1,0 +1,59 @@
+{
+  "surahId": 4,
+  "links": [
+    {
+      "nodeId": "1.1",
+      "kind": "image",
+      "url": "assets/data/resources/images/0_MihwarImage.png",
+      "label": "حقوق الأيتام – محور ١.١"
+    },
+    {
+      "nodeId": "1.2",
+      "kind": "image",
+      "url": "assets/data/resources/images/0_MihwarImage.png",
+      "label": "الزواج المكرم – محور ١.٢"
+    },
+    {
+      "nodeId": "1.3",
+      "kind": "image",
+      "url": "assets/data/resources/images/0_MihwarImage.png",
+      "label": "حقوق السفهاء – محور ١.٣"
+    },
+    {
+      "nodeId": "2.1",
+      "kind": "image",
+      "url": "assets/data/resources/images/1_MihwarImage.png",
+      "label": "نشوء الأسرة المركزية – محور ٢.١"
+    },
+    {
+      "nodeId": "2.2",
+      "kind": "image",
+      "url": "assets/data/resources/images/1_MihwarImage.png",
+      "label": "حقوق المرأة في الأسرة – محور ٢.٢"
+    },
+    {
+      "nodeId": "3.1",
+      "kind": "image",
+      "url": "assets/data/resources/images/2_MihwarImage.png",
+      "label": "المحافظة على الدين والنفس – محور ٣.١"
+    },
+    {
+      "nodeId": "3.2",
+      "kind": "image",
+      "url": "assets/data/resources/images/2_MihwarImage.png",
+      "label": "المحافظة على النسل والعقل والمال – محور ٣.٢"
+    },
+    {
+      "nodeId": "4.1",
+      "kind": "image",
+      "url": "assets/data/resources/images/3_MihwarImage.png",
+      "label": "الأسرة المتوسطة والأسرة الإنسانية – محور ٤.١"
+    },
+    {
+      "nodeId": "4.2",
+      "kind": "image",
+      "url": "assets/data/resources/images/3_MihwarImage.png",
+      "label": "الرحمة والمودة في الأسرة – محور ٤.٢"
+    }
+  ]
+}

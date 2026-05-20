@@ -1,0 +1,13 @@
+[
+  {
+    "planId": 1,
+    "planName": "Complete Surah Al-Baqarah",
+    "planType": "Surah",
+    "surahId": 2,
+    "juzId": null,
+    "startDate": "2025-01-10T00:00:00.000Z",
+    "targetDays": 40,
+    "isPlanComplete": false
+  }
+]
+

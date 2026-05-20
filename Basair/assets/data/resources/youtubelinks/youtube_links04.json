@@ -1,0 +1,114 @@
+{
+  "surahId": 4,
+  "links": [
+    {
+      "nodeId": "1.1",
+      "kind": "video",
+      "label": "Tafsir – Episode 3",
+      "url": "https://youtu.be/pcMhdv2Bkew?si=QFnMJSmWyGQjBM7m",
+      "start": 360
+    },
+    {
+      "nodeId": "1.2",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 1.2",
+      "url": "https://youtu.be/dExJM2rQ6pw?si=DzJ616ZNzcpJKQ2m"
+    },
+    {
+      "nodeId": "1.3",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 1.3",
+      "url": "https://youtu.be/j3XsvorPkfU?si=oa0jN8FNGtja2tVl"
+    },
+    {
+      "nodeId": "1.4",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 1.4",
+      "url": "https://youtu.be/0OWZXCghd5M?si=Jn9ikOpukwV1nBUD"
+    },
+    {
+      "nodeId": "1.5",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 1.5",
+      "url": "https://youtu.be/E9rX8eA5DZA?si=NyYIqjCIdSIlOtyk"
+    },
+    {
+      "nodeId": "2.1",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 2.1",
+      "url": "https://youtu.be/CIzTlNRjE2E?si=uzthmiODM3Z_4giG"
+    },
+    {
+      "nodeId": "2.2",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 2.2",
+      "url": "https://youtu.be/MpK7HMrzcAE?si=dXftTBlXmYYC9j3-"
+    },
+    {
+      "nodeId": "2.3",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 2.3",
+      "url": "https://youtu.be/Hs6GdySyj7w?si=wHrW9GfMDO8CDg85"
+    },
+    {
+      "nodeId": "2.4",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 2.4",
+      "url": "https://youtu.be/uBMETLrkcpo?si=xrawEYW7dqZKOw0j"
+    },
+    {
+      "nodeId": "3.1",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 3.1",
+      "url": "https://youtu.be/Os8Q_T-_KGY?si=2eCHj5OpgTt5HAdi"
+    },
+    {
+      "nodeId": "3.2",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 3.2",
+      "url": "https://youtu.be/vzQ6IyJkN4c?si=DYMQ_UMBncu8red3"
+    },
+    {
+      "nodeId": "3.3",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 3.3",
+      "url": "https://youtu.be/vzQ6IyJkN4c?si=NWpSlIajD0DiJkMB"
+    },
+    {
+      "nodeId": "3.4",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 3.4",
+      "url": "https://youtu.be/gyyTeUwRndE?si=9bCEgUCMNP5_By12"
+    },
+    {
+      "nodeId": "3.5",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 3.5",
+      "url": "https://youtu.be/bhUX2j1mkJc?si=VTkpAVEQAJ1y8y7v"
+    },
+    {
+      "nodeId": "3.6",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 3.6",
+      "url": "https://youtu.be/8k7zDJFnZ0E?si=L5UPIy2EpPHmZOVv"
+    },
+    {
+      "nodeId": "3.7",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 3.7",
+      "url": "https://youtu.be/bvpxIadzjeM?si=75t3mzVR96yquUXi"
+    },
+    {
+      "nodeId": "3.8",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 3.8",
+      "url": "https://youtu.be/JF1i-G2JOwM?si=QbQ7lgD4BptOi7ph"
+    },
+    {
+      "nodeId": "3.9",
+      "kind": "video",
+      "label": "Tafsir An-Nisa – 3.9",
+      "url": "https://youtu.be/CgWq9oh8E3M?si=NPfpj2q5ngF64Rqf"
+    }
+  ]
+}
